@@ -31,8 +31,8 @@ export default [
       species: 'Human',
       gender: 'Male',
       origin: {
-         name: 'unknown',
-         url: '',
+         name: 'Earth (C-137)',
+         url: 'https://rickandmortyapi.com/api/location/2',
       },
       image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
    },
