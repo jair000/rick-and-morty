@@ -1,26 +1,16 @@
-import { styled } from "styled-components";
 import Card from "./Card";
+import { CardsStyle } from "./CardsCss";
 
-const CardsStyle = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+export default function Cards({ characters, onClose }) {
+  const cartasStyle = {
+    border: "1px solid #fff",
+  };
 
-const cartasStyle = {
-  border: "1px solid #fff",
-
-}
-
-export default function Cards({ characters }) {
   return (
     <CardsStyle>
-      {characters.map((pj) => {
+      {characters.map(pj => {
         return (
-          <Card
-            key={pj.id}
-            pj={pj}
-            onClose={() => window.alert("Emulamos que se cierra la card")} style={cartasStyle}
-          />
+          <Card key={pj.id} pj={pj} onClose={onClose} style={cartasStyle} />
         );
       })}
     </CardsStyle>
