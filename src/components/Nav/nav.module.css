@@ -1,0 +1,61 @@
+.navbar {
+  background: url("/public/background-nav.png");
+  background-position: 0% 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.links > *:nth-child(1),
+.links > *:nth-child(2) {
+  background-color: #111;
+  color: white;
+  font-weight: bolder;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.links > *:nth-child(1):hover {
+  background: url("../../../public/pixel.png");
+  transition-delay: 0.3s;
+  background-size: 180px;
+  animation: animate 0.3s steps(8) forwards;
+}
+
+.links > *:nth-child(2):hover {
+  background: url("../../../public/pixel2.png");
+  transition-delay: 0.3s;
+  background-size: 180px;
+  animation: animate 0.3s steps(8) forwards;
+}
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+
+.btnrd {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../../public/rick-morty.png");
+  background-size: contain;
+}

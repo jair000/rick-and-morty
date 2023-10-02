@@ -1,0 +1,8 @@
+.contenedorCards {
+  width: 100%;
+  display: grid;
+  min-height: 85vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 500px;
+  justify-items: center;
+}

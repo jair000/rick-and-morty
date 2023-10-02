@@ -1,0 +1,22 @@
+.detailsContenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.detailsContenedor > *:nth-child(1) {
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f8f9f8;
+}
+
+.detailsContenedor > *:nth-child(2) > * {
+  border-radius: 50%;
+}

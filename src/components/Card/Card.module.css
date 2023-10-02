@@ -1,0 +1,29 @@
+.imgContainer {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.imgContainer::after {
+  content: "";
+  position: absolute;
+  margin-top: 175px;
+  margin-left: -90px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: -10px 10px 0 transparent;
+}
+
+.details {
+  background-color: #181918;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+}
+
+.description {
+  font-size: 13px;
+  margin-left: 10px;
+  color: #f1f1e6;
+}

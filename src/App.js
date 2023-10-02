@@ -1,28 +1,29 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable array-callback-return */
 import { useState } from "react";
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav.jsx";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/Nav/Nav.jsx";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About/About.jsx";
+import Details from "./components/Details/Details.jsx";
+import Error from "./components/Error404/Error.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   function onSearch(id) {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
-      ({ data }) => {
+    axios(`https://rickandmortyapi.com/api/character/${id}`)
+      .then(({ data }) => {
         if (data.name) {
-          characters.map(character => {
-            if (character.id == id) {
-              return window.alert("personaje repetido");
-            }
-          });
-          setCharacters(oldChars => [...oldChars, data]);
-        } else {
-          window.alert("No hay personajes con esta ID!");
+          const buscarPersonaje = characters.find(
+            character => character.id === data.id
+          );
+          if (!buscarPersonaje) setCharacters(oldChars => [...oldChars, data]);
+          else window.alert("¡El personaje ya existe!");
         }
-      }
-    );
+      })
+      .catch(() => {
+        return window.alert("No hay personajes con esta ID!");
+      });
   }
 
   const onClose = id => {
@@ -36,7 +37,16 @@ function App() {
   return (
     <div className="App">
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:id" element={<Details />} />
+        {/* Error 404 */}
+        <Route path="*" element={<Error />} />
+      </Routes>
     </div>
   );
 }
