@@ -3,12 +3,20 @@ import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import style from "./nav.module.css";
 
-export default function Nav({ onSearch }) {
+export default function Nav({ onSearch, setAccess }) {
   return (
     <div className={style.navbar}>
       <div className={style.links}>
         <Link to={"/home"}>Home</Link>
         <Link to={"/about"}>About</Link>
+        <button
+          className={style.logout}
+          onClick={() => {
+            setAccess(false);
+          }}
+        >
+          🚪 Logout
+        </button>
         <button
           className={style.btnrd}
           onClick={() => {

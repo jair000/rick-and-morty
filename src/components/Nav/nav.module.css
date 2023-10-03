@@ -59,3 +59,48 @@
   background-image: url("../../../public/rick-morty.png");
   background-size: contain;
 }
+
+.logout {
+  position: fixed;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  fill: #000;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  touch-action: manipulation;
+  bottom: 5%;
+  right: 4%;
+}
+
+.logout:focus {
+  color: #171e29;
+}
+
+.logout:hover {
+  background-color: #171e29;
+  border-color: #fff;
+  color: #fff;
+  fill: #fff;
+}
+
+.logout:active {
+  border-color: #fff;
+  color: #fff;
+  fill: #fff;
+}

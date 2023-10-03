@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  background-color: #111;
+  background-color: #111111c0;
 }
 
 .detailsContenedor > *:nth-child(1) {
@@ -19,4 +19,10 @@
 
 .detailsContenedor > *:nth-child(2) > * {
   border-radius: 50%;
+}
+
+.descriptionCharacter h1 {
+  padding: 20px;
+  background-color: #f4420b;
+  border-radius: 15px;
 }

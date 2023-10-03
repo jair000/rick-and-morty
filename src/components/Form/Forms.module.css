@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+}
+
+.form input {
+  color: black;
+}
+
+.form span {
+  color: crimson;
+  font-size: 12px;
+}

@@ -23,11 +23,11 @@ export default function Details() {
   return (
     <div className={style.detailsContenedor}>
       <div className={style.descriptionCharacter}>
-        <h1>{character.name}</h1>
-        <h3>STATUS | {character.status}</h3>
-        <h3>GENDER | {character.gender}</h3>
-        <h3>SPECIE | {character.species}</h3>
-        <h3>ORIGIN | {character.origin && character.origin.name}</h3>
+        <h1>👻 {character.name} 🤠</h1>
+        <h3>STATUS | {character.status} 🤍</h3>
+        <h3>GENDER | {character.gender} 🧐</h3>
+        <h3>SPECIE | {character.species} 🤖</h3>
+        <h3>ORIGIN | {character.origin && character.origin.name} 🐱‍🐉</h3>
       </div>
       <div className={style.imgCharacter}>
         <img src={character.image} alt={character.name} />
