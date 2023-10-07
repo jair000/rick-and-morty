@@ -9,6 +9,7 @@ export default function Nav({ onSearch, setAccess }) {
       <div className={style.links}>
         <Link to={"/home"}>Home</Link>
         <Link to={"/about"}>About</Link>
+        <Link to={"/favorites"}>Favorites</Link>
         <button
           className={style.logout}
           onClick={() => {

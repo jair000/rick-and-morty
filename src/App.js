@@ -15,7 +15,7 @@ import About from "./components/About/About.jsx";
 import Details from "./components/Details/Details.jsx";
 import Error from "./components/Error404/Error.jsx";
 import Form from "./components/Form/Form.jsx";
-
+import Favorites from "./components/Favorites/Favorites.jsx"
 import "./app.css";
 import { useEffect } from "react";
 
@@ -83,6 +83,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Details />} />
+        <Route path="/favorites" element={<Favorites/>}/>
         {/* Error 404 */}
         <Route path="*" element={<Error />} />
       </Routes>
